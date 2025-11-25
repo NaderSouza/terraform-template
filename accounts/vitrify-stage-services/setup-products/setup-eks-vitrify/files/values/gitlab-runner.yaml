@@ -1,0 +1,22 @@
+# gitlabUrl: https://gitlab.com
+# runnerRegistrationToken: glrt-GjD78bjsPpU2XJxtugy8
+# unregisterRunners: true
+# terminationGracePeriodSeconds: 3600
+# concurrent: 50
+# checkInterval: 30
+# rbac:
+#   create: true
+# resources:
+#   limits:
+#     memory: 256Mi
+#     cpu: 200m
+#   requests:
+#     memory: 128Mi
+#     cpu: 100m
+# runners:
+#   config: |
+#     [[runners]]
+#       request_concurrency = 15
+#       [runners.kubernetes]
+#         privileged = true
+#         image = "alpine:3.16.0"

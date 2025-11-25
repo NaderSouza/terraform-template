@@ -1,0 +1,17 @@
+{
+    "rules": [
+      {
+        "rulePriority": 1,
+        "description": "Keep last 50 images with the tag 'v', example: 'v1', 'v1.1'...",
+        "selection": {
+          "tagStatus": "tagged",
+          "tagPrefixList": ["v"],
+          "countType": "imageCountMoreThan",
+          "countNumber": 50
+        },
+        "action": {
+          "type": "expire"
+        }
+      }
+    ]
+  }

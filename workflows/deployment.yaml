@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+  namespace: arc-runners
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      serviceAccountName: github-ecr-access-us
+      containers:
+      - name: app
+        image: 157489942873.dkr.ecr.us-east-1.amazonaws.com/app:v1
+        command: ["sh", "-c", "echo 'Hello from Docker!' && sleep infinity"]
+        ports:
+        - containerPort: 80

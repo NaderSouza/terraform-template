@@ -1,0 +1,10 @@
+[33mf735605[m[33m ([m[1;36mHEAD[m[33m)[m HEAD@{0}: reset: moving to HEAD^
+[33m240f6f8[m HEAD@{1}: reset: moving to HEAD^
+[33m774b9fe[m HEAD@{2}: reset: moving to HEAD^
+[33m311c487[m HEAD@{3}: checkout: moving from main to HEAD^
+[33m7b15025[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{4}: commit: feat: add prod services
+[33m311c487[m HEAD@{5}: commit: feat: dns
+[33m774b9fe[m HEAD@{6}: commit: feat: add stage services
+[33m240f6f8[m HEAD@{7}: commit: fix: added contacts
+[33mf735605[m[33m ([m[1;36mHEAD[m[33m)[m HEAD@{8}: commit: add content
+[33m144b340[m HEAD@{9}: clone: from https://gitlab.com/nuageit/delivery/vitrify/cloud-management.git
