@@ -68,3 +68,43 @@ Se precisar pausar uma aplicação temporariamente, isso pode ser feito via Ranc
 ```bash
 kubectl scale deployment <nome-do-deployment> --replicas=0 -n <namespace>
 ```
+
+---
+
+##  Terraform
+
+A infraestrutura do projeto é gerenciada como código usando **Terraform** e **Terragrunt**, seguindo as melhores práticas para garantir um ambiente consistente, escalável e seguro.
+
+### Estrutura de Diretórios
+
+A configuração do Terraform está organizada da seguinte forma:
+
+- **`accounts/`**: Contém a infraestrutura para as diferentes contas da AWS, dividida por função.
+  - **`setup-terraform-backend/`**: Configura o bucket S3 e a tabela DynamoDB para o estado remoto do Terraform.
+  - **`setup-account/`**: Define os recursos específicos de cada conta, como políticas de IAM, configurações de segurança e outros serviços da AWS.
+- **`modules/`**: Contém módulos reutilizáveis do Terraform para criar recursos de forma padronizada.
+- **`terragrunt.hcl`**: Arquivo de configuração do Terragrunt, que define o estado remoto e as variáveis de entrada para os módulos do Terraform.
+
+### Como Aplicar as Alterações
+
+Para aplicar as alterações na infraestrutura, siga os passos abaixo:
+
+1. Navegue até o diretório da conta que deseja modificar:
+
+   ```bash
+   cd accounts/<nome-da-conta>/<ambiente>
+   ```
+
+2. Execute o comando `terragrunt plan` para visualizar as alterações que serão aplicadas:
+
+   ```bash
+   terragrunt plan
+   ```
+
+3. Se as alterações estiverem corretas, execute o comando `terragrunt apply` para aplicá-las:
+
+   ```bash
+   terragrunt apply
+   ```
+
+> **Observação:** É necessário ter as credenciais da AWS configuradas no seu ambiente local para executar os comandos do Terragrunt.
