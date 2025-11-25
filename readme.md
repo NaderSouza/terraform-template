@@ -75,6 +75,8 @@ kubectl scale deployment <nome-do-deployment> --replicas=0 -n <namespace>
 
 A infraestrutura do projeto é gerenciada como código usando **Terraform** e **Terragrunt**, seguindo as melhores práticas para garantir um ambiente consistente, escalável e seguro.
 
+Para uma documentação mais detalhada sobre a estrutura e os recursos de cada conta, consulte o [README do diretório de contas](./accounts/README.md).
+
 ### Estrutura de Diretórios
 
 A configuração do Terraform está organizada da seguinte forma:
