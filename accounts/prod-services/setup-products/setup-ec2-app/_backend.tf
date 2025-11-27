@@ -1,0 +1,12 @@
+# ==================================================================
+# TERRAFORM REMOTE BACKEND CONFIGURATION
+# ==================================================================
+terraform {
+  backend "s3" {
+    bucket         = "582577266226-tf-remote-state"
+    dynamodb_table = "582577266226-tf-remote-state-lock"
+    encrypt        = true
+    key            = "accounts/prod-services/setup-ec2-app/terraform.tfstate"
+    region         = "us-east-1"
+  }
+}

@@ -2,7 +2,7 @@
 
 ## 🧭 Visão Geral
 
-Este documento tem como objetivo orientar o time da **Vitrify** sobre como realizar deploys de aplicações nos clusters Kubernetes de **Production** e **Stage**, utilizando:
+Este documento tem como objetivo orientar o time da **Teck Soluçoes** sobre como realizar deploys de aplicações nos clusters Kubernetes de **Production** e **Stage**, utilizando:
 
 - **GitHub Actions** para automação do pipeline
 - **Amazon ECR** como registro de imagens
@@ -29,7 +29,7 @@ O pipeline no GitHub está configurado para:
 
 Após o deploy, você pode validar o funcionamento da aplicação diretamente no **Rancher**.
 
-🔗 Acesse: [https://rancher.shared.vitrify.tech/](https://rancher.shared.vitrify.tech/)
+<!-- 🔗 Acesse: [https://rancher.shared.teckSolucoes.tech/](https://rancher.shared.teckSolucoes.tech/) -->
 
 > É necessário login para acesso. Utilize suas credenciais fornecidas previamente.
 
@@ -71,7 +71,7 @@ kubectl scale deployment <nome-do-deployment> --replicas=0 -n <namespace>
 
 ---
 
-##  Terraform
+## Terraform
 
 A infraestrutura do projeto é gerenciada como código usando **Terraform** e **Terragrunt**, seguindo as melhores práticas para garantir um ambiente consistente, escalável e seguro.
 
